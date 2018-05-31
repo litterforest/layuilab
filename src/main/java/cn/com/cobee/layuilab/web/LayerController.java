@@ -14,4 +14,10 @@ public class LayerController {
         return "layer/showCase";
     }
 
+    @GetMapping(value = "/formValidation")
+    public String formValidation()
+    {
+        return "layer/formValidation";
+    }
+
 }
