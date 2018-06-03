@@ -17,4 +17,10 @@ public class LayUIController {
         return "layui/tab";
     }
 
+    @GetMapping(value = "/staticTable")
+    public String staticTable()
+    {
+        return "layui/staticTable";
+    }
+
 }

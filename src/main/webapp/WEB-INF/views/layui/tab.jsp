@@ -11,7 +11,6 @@
 <head>
     <title>tab标签页</title>
     <link rel="stylesheet" href="${ctx}/static/js/layui/css/layui.css" >
-    <script type="text/javascript" src="${ctx}/static/js/jquery/jquery-3.3.1.min.js"></script>
     <script type="text/javascript" src="${ctx}/static/js/layui/layui.js" ></script>
 </head>
 <body>
@@ -28,7 +27,7 @@
         <div class="layui-tab-item layui-show">
             <iframe src="${ctx}/layer/showCase" frameborder="0" style="width: 98%; height: 90%;"></iframe>
         </div>
-        <div class="layui-tab-item">2</div>
+        <div class="layui-tab-item"><button class="layui-btn">点击我</button></div>
         <div class="layui-tab-item">3</div>
         <div class="layui-tab-item">4</div>
         <div class="layui-tab-item">5</div>
@@ -38,10 +37,22 @@
 
 </body>
 <script type="text/javascript" >
-    layui.use('element', function(){
-        var element = layui.element;
 
-        //…
+    layui.use(['element', 'layer', "jquery"], function(){
+        var element = layui.element;
+        var layer = layui.layer;
+        var $ = layui.jquery;
+
+        $("button").on("click", function(){
+            myAlert();
+        });
+
+        function myAlert()
+        {
+            layer.alert("Hello");
+        }
+
     });
+
 </script>
 </html>
