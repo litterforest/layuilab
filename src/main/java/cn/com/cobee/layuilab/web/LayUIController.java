@@ -23,4 +23,34 @@ public class LayUIController {
         return "layui/staticTable";
     }
 
+    @GetMapping(value = "/badge")
+    public String badge()
+    {
+        return "layui/badge";
+    }
+
+    @GetMapping(value = "/timeline")
+    public String timeline()
+    {
+        return "layui/timeline";
+    }
+
+    @GetMapping(value = "/auxiliary")
+    public String auxiliary()
+    {
+        return "layui/auxiliary";
+    }
+
+    @GetMapping(value = "/carousel")
+    public String carousel()
+    {
+        return "layui/carousel";
+    }
+
+    @GetMapping(value = "/laypage")
+    public String laypage()
+    {
+        return "layui/laypage";
+    }
+
 }
